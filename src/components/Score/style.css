@@ -1,0 +1,7 @@
+#score {
+  font-size: larger;
+}
+
+#score > span {
+  font-weight: 600;
+}

@@ -1,0 +1,17 @@
+#htp {
+  background-color: black;
+  color: antiquewhite;
+  padding: 3%;
+  border: none;
+  font-size: large;
+}
+
+#htp:hover {
+  background-color: rgb(50, 47, 47);
+}
+
+#htp_div {
+  border: solid 1px black;
+  padding: 2%;
+  margin: 2%;
+}
