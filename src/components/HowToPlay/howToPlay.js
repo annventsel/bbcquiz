@@ -1,18 +1,20 @@
-import "./style.css";
+import styles from './howToPlay.module.css';
 import { useState } from "react";
-function HowToPlay() {
+
+
+
+const HowToPlay = () => {
+
   const [toggle, setToggle] = useState(false);
-  const toggleButton = () => {
-    setToggle(!toggle);
-  };
+  
   return (
     <>
-      <button id="htp" onClick={() => toggleButton()}>
+      <button className={styles.htp} onClick={() => setToggle(!toggle)}>
         How to play
       </button>
       {toggle && (
-        <div id="htp_div">
-          <p>
+        <p className={styles.border}>
+          
             To get under way, click 'Start'. You won’t be able to see any of the
             images until you’ve done so! Once you have started the quiz, type an
             answer into the box and either hit enter or click the submit button.
@@ -28,7 +30,6 @@ function HowToPlay() {
             up!' button. You can then reveal the answers you missed - or have
             another go.
           </p>
-        </div>
       )}
     </>
   );

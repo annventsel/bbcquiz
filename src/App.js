@@ -1,18 +1,17 @@
-import logo from "./logo.svg";
-import "./App.css";
+import "./style.css";
 
-import HowToPlay from "./components/HowToPlay";
-import Score from "./components/Score";
-import Timer from "./components/Timer";
+import HowToPlay from "./components/HowToPlay/howToPlay";
+import Score from "./components/Score/score";
+import Timer from "./components/Timer/timer";
 import Starter from "./components/Starter";
-import Slider from "./components/Slider";
+import Slider from "./components/Slider/slider";
 
 function App() {
   return (
-    <div className="App">
+    <div className="app">
       <h1>Can you name the Premier League footballers?</h1>
       <HowToPlay />
-      <section>
+      <section className="app__score">
         <Score />
         <Timer />
       </section>

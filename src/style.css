@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: ReithSans, Arial, Helvetica, freesans, sans-serif;
+
+  /* -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; */
+}
+
+h1 {
+
+  text-align: left;
+  width: 50%;
+  margin-top: 5%;
+  margin-left: 25%;
+  padding-bottom: 2%;
+
+}
+
+.app {
+  width: 80%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.app__score {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  margin-left: 25%;
+  margin-top: 5%;
+}

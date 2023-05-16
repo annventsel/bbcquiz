@@ -1,0 +1,21 @@
+.htp {
+  display: flex;
+  font-size: large;
+  padding: 1%;
+  margin-left: 25%;
+  margin-top: 2%;
+  border: none;
+  background-color: black;
+  color: antiquewhite;
+  cursor: pointer;
+}
+
+.htp:hover {
+  background-color: rgb(50, 47, 47);
+}
+
+.border {
+  border: solid 1px black;
+  padding: 2%;
+  margin: 2%;
+}

@@ -1,7 +1,8 @@
-#score {
+.score {
+  display: flex;
   font-size: larger;
 }
 
-#score > span {
+.score > span {
   font-weight: 600;
 }
