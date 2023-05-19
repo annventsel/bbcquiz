@@ -1,12 +1,15 @@
 import styles from './score.module.css';
-import { useState } from "react";
+import { players } from '../players';
 
-function Score() {
-  const [counter, setCounter] = useState(0);
+const Score = ({ score }) => {
+
   return (
     <section className={styles.score}>
       <p>
-        Score: <span> {counter} / 7</span>
+        Score:
+        <span>
+          {score} / {players.length}
+        </span>
       </p>
     </section>
   );

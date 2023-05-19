@@ -1,10 +1,17 @@
 .carousel {
-    width: 45%;
-    margin: 0 auto;
+  margin-left: 25%;
+  padding-top: 8%;
+}
+
+.blocked {
+  filter: blur(10px);
+}
+
+.unblocked {
+  filter: none;
   }
 
-
-/* 
+/*
 .customarrow {
     background-color: red;
     color: white;
