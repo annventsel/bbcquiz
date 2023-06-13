@@ -1,12 +1,18 @@
+p {
+  padding-bottom: 8px;
+  font-size: 1.1rem;
+  line-height: 1.30rem;
+}
+
 .htp {
   display: flex;
   font-size: large;
   padding: 1%;
   margin-left: 25%;
-  margin-top: 2%;
+  margin-top: 1%;
   border: none;
   background-color: black;
-  color: antiquewhite;
+  color: white;
   cursor: pointer;
 }
 
@@ -15,7 +21,10 @@
 }
 
 .border {
-  border: solid 1px black;
+  border: solid 1px #dbdbdb;;
   padding: 2%;
-  margin: 2%;
+  margin-left: 25%;
+  margin-top: 8px;
+  text-align: left;
 }
+    

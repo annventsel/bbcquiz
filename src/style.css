@@ -12,26 +12,24 @@ body {
   -moz-osx-font-smoothing: grayscale; */
 }
 
-h1 {
+h2 {
 
   text-align: left;
-  width: 50%;
   margin-top: 5%;
   margin-left: 25%;
-  padding-bottom: 2%;
+  padding-bottom: 1%;
 
 }
 
 .app {
-  width: 80%;
+  width: 50%;
   text-align: center;
-  margin: 0 auto;
 }
 
 .app__score {
-  display: flex;
-  justify-content: space-between;
-  width: 50%;
+  /* display: flex; */
+  /* justify-content: space-between;
+  width: 50%; */
   margin-left: 25%;
   margin-top: 5%;
 }

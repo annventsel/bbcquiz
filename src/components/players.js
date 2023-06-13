@@ -2,36 +2,43 @@ export const players = [
     {
         id: 1,
         imgSrc: 'images/1.jpg',
-        answer: 'Football Player 1',
+        answer: 'Morten Gamst Pedersen',
+        question: 'Who am I?'
     },
     {
         id: 2,
         imgSrc: 'images/2.jpg',
-        answer: 'Football Player 2',
+        answer: 'Jordan Pickford',
+        question: 'Who am I?'
     },   
     {
         id: 3,
         imgSrc: 'images/3.jpg',
-        answer: 'Football Player 3',
+        answer: 'Elliot Anderson',
+        question: 'Who am I?'
     },
     {
         id: 4,
         imgSrc: 'images/4.jpg',
-        answer: 'Football Player 4',
+        answer: 'David Platt',
+        question: 'Who am I?'
     },
     {
         id: 5,
         imgSrc: 'images/5.jpg',
-        answer: 'Football Player 5',
+        answer: 'Serge Gnabry',
+        question: 'Who am I?'
     },
     {
         id: 6,
         imgSrc: 'images/6.jpg',
-        answer: 'Football Player 6',
+        answer: 'Matej Vydra',
+        question: 'Who am I?'
     },
     {
         id: 7,
         imgSrc: 'images/7.jpg',
-        answer: 'Football Player 7',
+        answer: 'Alexander Buttner',
+        question: 'Who am I?'
     },
 ]

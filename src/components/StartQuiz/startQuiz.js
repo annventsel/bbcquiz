@@ -2,7 +2,7 @@ import styles from './startQuiz.module.css';
 import { useState } from "react";
 
 
-const StartQuiz = ({onSubmit, isQuizStarted}) => {
+const StartQuiz = ({ onSubmit, isQuizStarted }) => {
   const [currentAnswer, setCurrentAnswer] = useState('');
 
   const handleAnswerInput = (event) => {
@@ -18,17 +18,19 @@ const StartQuiz = ({onSubmit, isQuizStarted}) => {
     <>
       {isQuizStarted && (
         <section id="starter_answer">
-          <input 
-          type="text" 
-          placeholder="Enter your answer"
-          onChange={handleAnswerInput}
-          value={currentAnswer} // we need put the value if we want to clear input programmaticaly
-           />
-          <button 
-          className={styles.starter}
-          onClick={handleSubmitClick}
+          <input
+            className={styles.answerInput}
+            type="text"
+            placeholder="Enter your answer"
+            onChange={handleAnswerInput}
+            value={currentAnswer} // we need put the value if we want to clear input programmaticaly
+          />
+          <button
+            className={styles.buttonSubmit}
+            onClick={handleSubmitClick}
           >Submit</button>
         </section>
+
       )}
     </>
   );

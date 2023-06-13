@@ -4,6 +4,7 @@ import Score from "./components/Score/score";
 import Timer from "./components/Timer/timer";
 import StartQuiz from "./components/StartQuiz/startQuiz";
 import Slider from "./components/Slider/slider";
+import CompletedGame from "./components/CompletedGame/completedGame";
 import { useState } from "react";
 import { players } from "./components/players";
 
@@ -11,6 +12,7 @@ function App() {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [score, setScore] = useState(0);
   const [isQuizStarted, setIsQuizStarted] = useState(false);
+  const [isQuizCompleted, setQuizCompleted] = useState(false);
 
   // this function telling a child component what to do when the user submits the answer
   const handleAnswerSubmit = (answer) => {
@@ -26,16 +28,31 @@ const onStart = () => {
   setIsQuizStarted(true);
 }
 
+const onComplete = () => {
+  setQuizCompleted(true);
+  // setScore(0);
+}
+
   return (
     <div className="app">
-      <h1>Can you name the Premier League footballers?</h1>
+      <h2>Can you name the Premier League footballers?</h2>
       <HowToPlay />
       <section className="app__score">
         <Score score={score}/>
-        <Timer onStart={onStart} isQuizStarted={isQuizStarted}/>
+        <Timer onStart={onStart} isQuizStarted={isQuizStarted} onComplete={onComplete}/>
       </section>
       <StartQuiz onSubmit={handleAnswerSubmit} isQuizStarted={isQuizStarted}/>
-      <Slider currentQuestion={currentQuestion} isQuizStarted={isQuizStarted}/>
+      <Slider 
+      currentQuestion={currentQuestion} 
+      isQuizStarted={isQuizStarted} 
+      isQuizCompleted={isQuizCompleted}
+      onStart={setIsQuizStarted}
+      onComplete={setQuizCompleted}
+      setScore={setScore}
+      setCurrentQuestion={setCurrentQuestion}
+      />
+      <CompletedGame />
+
     </div>
   );
 }

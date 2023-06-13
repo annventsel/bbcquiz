@@ -1,11 +1,16 @@
+.timer {
+  display: grid;
+  margin-top: -5%;
+}
+
 .starter {  
     background-color: #ffd230;
     color: black;
-    padding: 1% 20%;
+    padding: 2% 20%;
     border: none;
     font-size: 1.1rem;
     font-weight: 500;
-    margin: 2%;
+    margin-top: 2%;
     cursor: pointer;
   }
   
@@ -16,7 +21,29 @@
   .starter_answer {
     margin: 2%;
   }
+
+  .giveUp_button {
+    position: absolute;
+    font-size: large;
+    top: 90%;
+    border: none;
+    padding: 1%;
+    margin-top: 25px;
+    cursor: pointer;
+  }
   
   input {
     padding: 3% 20%;
+  }
+
+  span {
+    text-align: right;
+  }
+
+  .redText {
+    color: red;
+  }
+
+  .blackText {
+    color: black;
   }

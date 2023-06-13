@@ -1,1 +1,23 @@
+.answerInput {
+    width: 60%;
+    font-size: 1.25rem;
+    margin-left: 25%;
+    margin-top: 5px;
+    padding: 8px;
+    border: solid 1px #dbdbdb;
+    line-height: 1.5rem;
+}
 
+.buttonSubmit {
+    background-color: #ffd230;
+    color: #000;
+    overflow: visible;
+    margin: 0;
+    padding: 8px;
+    text-align: center;
+    border: 0;
+    min-height: 42px;
+    width: 15%;
+    font-size: 1.25rem;
+    cursor: pointer;
+}

@@ -2,24 +2,24 @@ import React, { useRef, useState } from 'react';
 import Countdown from 'react-countdown';
 import styles from './timer.module.css';
 
-function Timer(props) {
-  const [startDate] = useState(Date.now());
+const Timer = ({ onStart, isQuizStarted, onComplete }) => {
+  const [startDate, setStartDate] = useState(Date.now());
   const timerRef = useRef();
 
   const startCountdown = () => {
-    props.onStart(); // starts game and open input field for tapping answer
+    onStart(); // starts game and open input field for tapping answer
     timerRef.current.start(); // turns on the timer when we push the button 
+    setStartDate(startDate);
+  }
+
+  const completedCountdown = () => {
+    onComplete();
+    timerRef.current.stop()
   }
 
   return (
 
-    <section>
-      {!props.isQuizStarted &&
-         <button className={styles.starter} onClick={startCountdown}>
-        Start quiz
-      </button>
-      }
-     
+    <section className={styles.timer}>
 
       <Countdown
         date={startDate + 120000}
@@ -27,13 +27,30 @@ function Timer(props) {
         zeroPadTime={2}
         autoStart={false}
         ref={timerRef}
-        renderer={props => (
-          <span>
-            {String(props.minutes).padStart(2, '0')}:
-            {String(props.seconds).padStart(2, '0')}
+        // onComplete={completedCountdown}
+
+        renderer={({ minutes, seconds }) => (
+          <span className={(seconds <= 10 && minutes === 0) ? styles.redText : styles.blackText}>
+            {String(minutes).padStart(2, '0')}:
+            {String(seconds).padStart(2, '0')}
           </span>
         )}
       />
+
+      {!isQuizStarted &&
+        <button className={styles.starter} onClick={startCountdown}>
+          Start quiz
+        </button>
+      }
+      {isQuizStarted && (
+        <button
+          className={styles.giveUp_button}
+          onClick={completedCountdown}>
+          Give Up
+        </button>
+      )
+
+      }
 
     </section>
   );
