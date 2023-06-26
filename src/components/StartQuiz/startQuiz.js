@@ -2,7 +2,7 @@ import styles from './startQuiz.module.css';
 import { useState } from "react";
 
 
-const StartQuiz = ({ onSubmit, isQuizStarted }) => {
+const StartQuiz = ({ onSubmit, isQuizStarted, isGivenUp }) => {
   const [currentAnswer, setCurrentAnswer] = useState('');
 
   const handleAnswerInput = (event) => {

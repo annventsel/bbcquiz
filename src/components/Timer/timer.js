@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react';
 import Countdown from 'react-countdown';
 import styles from './timer.module.css';
 
-const Timer = ({ onStart, isQuizStarted, onComplete }) => {
+const Timer = ({ onStart, isQuizStarted, onComplete, setIsGivenUp }) => {
   const [startDate, setStartDate] = useState(Date.now());
   const timerRef = useRef();
 
@@ -15,6 +15,7 @@ const Timer = ({ onStart, isQuizStarted, onComplete }) => {
   const completedCountdown = () => {
     onComplete();
     timerRef.current.stop()
+    setIsGivenUp(true);
   }
 
   return (

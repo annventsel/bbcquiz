@@ -4,7 +4,7 @@ import styles from './slider.module.css';
 import { players } from '../players';
 import { useState } from 'react';
 
-const Slider = ({ currentQuestion, isQuizStarted, isQuizCompleted, onStart, onComplete, setScore, setCurrentQuestion }) => {
+const Slider = ({ currentQuestion, isQuizStarted, isQuizCompleted, onStart, onComplete, setScore, setCurrentQuestion, isGivenUp }) => {
 const [showAnswers, setShowAnswers] = useState(false);
 const answersToggle = () => {
   setShowAnswers(!showAnswers)
