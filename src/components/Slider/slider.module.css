@@ -22,7 +22,7 @@
  .tryAgain__button {
   position: absolute;
   font-size: large;
-  top: 38%;
+  top: 34%;
   left: 18%;
   background-color: black;
   color: white;
@@ -33,7 +33,7 @@
  .showAnswers__button {
   position: absolute;
   font-size: large;
-  top: 38%;
+  top: 34%;
   left: 30%;
   background-color: #ededed;
   color: #252525;
